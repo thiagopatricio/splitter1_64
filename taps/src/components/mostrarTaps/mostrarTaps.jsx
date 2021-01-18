@@ -22,8 +22,8 @@ function Taps(props) {
           autoComplete="off"
           onReset={() => {
             setSplitter8(splitter8*0);
-            setSplitter4(0);
-            setSplitter2(0);
+            setSplitter4(splitter4*0);
+            setSplitter2(splitter2*0);
           }}
         >
           <TextField
