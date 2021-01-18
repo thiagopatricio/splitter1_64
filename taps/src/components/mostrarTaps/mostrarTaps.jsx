@@ -21,7 +21,7 @@ function Taps(props) {
           noValidate
           autoComplete="off"
           onReset={() => {
-            setSplitter8(0);
+            setSplitter8(splitter8*0);
             setSplitter4(0);
             setSplitter2(0);
           }}
