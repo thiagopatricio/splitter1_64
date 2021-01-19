@@ -2,8 +2,6 @@ import React, { useState } from "react";
 
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-import CssBaseline from "@material-ui/core/CssBaseline";
-
 import Container from "@material-ui/core/Container";
 
 function Taps(props) {
@@ -12,44 +10,50 @@ function Taps(props) {
   const [splitter2, setSplitter2] = useState(0);
 
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container maxWidth="sm">
+   
+    
+      <Container maxWidth="sm" align="center"  >
         <h1> Splitter 1/64 </h1>
 
-        <form
+        <form align="center"
           noValidate
           autoComplete="off"
           onReset={() => {
-            setSplitter8(splitter8*0);
-            setSplitter4(splitter4*0);
-            setSplitter2(splitter2*0);
+       setSplitter8(0)
+       setSplitter4(0)
+       setSplitter2(0)
           }}
         >
           <TextField
-            onChange={(event) => setSplitter8(event.target.value)}
+            onInput={(event) => setSplitter8(event.target.value)}
             id="splitter8"
             placeholder="Splitter 1/8"
+            label="Splitter 1/8"
             variant="outlined"
             type="number"
             fullWidth
+            margin="normal"
           />
 
-          <TextField
-            onChange={(event) => setSplitter4(event.target.value)}
+          <TextField 
+             onInput={(event) => setSplitter4(event.target.value)}
             id="splitter4"
             placeholder="Splitter 1/4"
+            label="Splitter 1/4"
             variant="outlined"
             type="number"
+            margin="normal"
             fullWidth
           />
 
           <TextField
-            onChange={(event) => setSplitter2(event.target.value)}
+            onInput={(event) => setSplitter2(event.target.value)}
             id="splitter2"
             placeholder="Splitter 1/2"
+            label="Splitter 1/2"
             variant="outlined"
             type="number"
+            margin="normal"
             fullWidth
           />
 
@@ -160,14 +164,14 @@ function Taps(props) {
               ? `Quarto Splitter 1/8: ${splitter2 * 2 * 4}`
               : ``}
           </h3>
-          <Button type="reset" variant="contained" color="primary">
+          <Button  type="reset" variant="contained" color="primary"   margin="normal">
             Limpar
           </Button>
         </form>
 
-        <footer> Desenvolvido por Thiago Patricio da Silva </footer>
+        <footer   margin="2px"> Desenvolvido por Thiago Patricio da Silva </footer>
       </Container>
-    </React.Fragment>
+  
   );
 }
 
