@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Container from "@material-ui/core/Container";
 
-function Taps(props) {
+function Taps() {
   const [splitter8, setSplitter8] = useState(0);
   const [splitter4, setSplitter4] = useState(0);
   const [splitter2, setSplitter2] = useState(0);
@@ -31,6 +30,8 @@ function Taps(props) {
             label="Splitter 1/8"
             variant="outlined"
             type="number"
+            step="1"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
             fullWidth
             margin="normal"
           />
@@ -42,6 +43,8 @@ function Taps(props) {
             label="Splitter 1/4"
             variant="outlined"
             type="number"
+            step="1"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
             margin="normal"
             fullWidth
           />
@@ -53,6 +56,8 @@ function Taps(props) {
             label="Splitter 1/2"
             variant="outlined"
             type="number"
+            step="1"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
             margin="normal"
             fullWidth
           />
@@ -169,7 +174,7 @@ function Taps(props) {
           </Button>
         </form>
 
-        <footer   margin="2px"> Desenvolvido por Thiago Patricio da Silva </footer>
+        <footer   > Desenvolvido por Thiago Patricio da Silva </footer>
       </Container>
   
   );
