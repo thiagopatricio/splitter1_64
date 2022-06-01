@@ -175,6 +175,7 @@ function Taps() {
         </form>
 
         <footer   > Desenvolvido por Thiago Patricio da Silva </footer>
+        <footer   > Aló para, Laio Ancora, Joelson Esquecidinho, Hyago Caranguejo </footer>
       </Container>
   
   );
